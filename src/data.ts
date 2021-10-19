@@ -1,12 +1,13 @@
 interface Albuns {
+  id: number;
   title: string;
   songs: { id: number; name: string }[];
   imageUrl: string;
 }
-[];
 
 const albuns: Albuns[] = [
   {
+    id: 1,
     title: 'Evanescence',
     songs: [
       { id: 1, name: 'What you Want' },
@@ -26,6 +27,7 @@ const albuns: Albuns[] = [
       'https://upload.wikimedia.org/wikipedia/pt/b/b5/Evanescence_Album.jpg',
   },
   {
+    id: 2,
     title: 'Fallen',
     songs: [
       { id: 1, name: 'Going Under' },
@@ -43,6 +45,7 @@ const albuns: Albuns[] = [
     imageUrl: 'https://upload.wikimedia.org/wikipedia/pt/5/59/Fallen.jpg',
   },
   {
+    id: 3,
     title: 'Syntesis',
     songs: [
       { id: 1, name: 'Overture' },
@@ -66,6 +69,7 @@ const albuns: Albuns[] = [
       'https://upload.wikimedia.org/wikipedia/en/8/86/Evanescence_-_Synthesis.png',
   },
   {
+    id: 4,
     title: 'The Bitter Truth',
     songs: [
       { id: 1, name: 'Artifact/The Turn' },
@@ -85,6 +89,7 @@ const albuns: Albuns[] = [
       'https://upload.wikimedia.org/wikipedia/pt/8/83/The_Bitter_Truth_por_Evanescence.JPG',
   },
   {
+    id: 5,
     title: 'The Open Door',
     songs: [
       { id: 1, name: 'Sweet Sacrifice' },
