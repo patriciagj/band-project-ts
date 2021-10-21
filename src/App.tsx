@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-const App: React.FC = () => {
-  return <div className='App'></div>;
-};
+import { Header } from './components/header/header.component';
+import { AlbumList } from './components/album-list/album-list.component';
+import { PlaylistPage } from './page/playlist-page';
+
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Switch>
+          <Header />
+          <Route path='/' exact>
+            <AlbumList />
+          </Route>
+          <Route path='/:album'>
+            <PlaylistPage />
+          </Route>
+        </Switch>
+      </React.Fragment>
+    );
+  }
+}
 
 export default App;
