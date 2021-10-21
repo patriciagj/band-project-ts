@@ -9,8 +9,8 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
+        <Header />
         <Switch>
-          <Header />
           <Route path='/' exact>
             <AlbumList />
           </Route>
