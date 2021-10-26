@@ -4,9 +4,6 @@ const useStyles = makeStyles(() => ({
   content: {
     justifyContent: 'space-around',
   },
-  title: {
-    fontSize: '15px',
-  },
 }));
 
 export default useStyles;

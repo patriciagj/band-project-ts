@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 import useStyles from './album.component.styles';
 
@@ -15,19 +17,24 @@ type AlbumProps = {
 export const Album: React.FC<AlbumProps> = props => {
   const classes = useStyles();
   return (
-    <Card sx={{ maxWidth: 250 }}>
+    <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component='img'
-        height='140'
+        height='200'
         image={props.imageUrl}
         alt='album'
       />
-      <CardActions className={classes.content}>
-        <Button
-          className={classes.title}
-          size='small'
-        >{`${props.title}`}</Button>
-      </CardActions>
+      <CardContent>
+        <Typography
+          gutterBottom
+          variant='h6'
+          component='div'
+          align='center'
+        >{`${props.title}`}</Typography>
+        <CardActions className={classes.content}>
+          <Link to={`/${props.title}`}>Playlist</Link>
+        </CardActions>
+      </CardContent>
     </Card>
   );
 };

@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
   return (
     <div>
       <AppBar className={classes.appBar} position='fixed'>
-        <Typography align='center' variant='h6'>
+        <Typography align='center' variant='h5'>
           Evanescence Discography
         </Typography>
       </AppBar>
